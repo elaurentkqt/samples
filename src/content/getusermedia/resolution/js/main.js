@@ -19,6 +19,7 @@ const fullHdButton = document.querySelector('#full-hd');
 const cinemaFourKButton = document.querySelector('#cinemaFourK');
 const televisionFourKButton = document.querySelector('#televisionFourK');
 const eightKButton = document.querySelector('#eightK');
+const twelveMPButton = document.querySelector('#twelveMP');
 
 const videoblock = document.querySelector('#videoblock');
 const messagebox = document.querySelector('#errormessage');
@@ -59,6 +60,10 @@ eightKButton.onclick = () => {
   getMedia(eightKConstraints);
 };
 
+twelveMPButton.onclick = () => {
+  getMedia(twelveMPConstraints);
+};
+
 const qvgaConstraints = {
   video: {width: {exact: 320}, height: {exact: 240}}
 };
@@ -86,6 +91,11 @@ const cinemaFourKConstraints = {
 const eightKConstraints = {
   video: {width: {exact: 7680}, height: {exact: 4320}}
 };
+
+const twelveMPConstraints = {
+  video: {width: {exact: 4032}, height: {exact: 3024}}
+};
+
 
 function gotStream(mediaStream) {
   stream = window.stream = mediaStream; // stream available to console
